@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo cp -r root/* / 
+sudo cp -r webprod.pa/* / 
+sudo /usr/local/sbin/mk_ucsf_legacy_rewrite_rules.sh
+sudo /etc/init.d/httpd restart
