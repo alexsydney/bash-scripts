@@ -1,0 +1,12 @@
+sudo rsync -ruvn --stats --include='*/' --include='*.avi' --include='*.bmp' --include='*.DOC' --include='*.doc' --include='*.docx' --include='*.dwt' --include='*.eps' --include='*.f4v' --include='*.fla' --include='*.flv' --include='*.gif' --include='*.hqx' --include='*.jar' --include='*.jp2' --include='*.jpe' --include='*.jpeg' --include='*.JPG' --include='*.jpg' --include='*.kml' --include='*.lng' --include='*.m4a' --include='*.m4v' --include='*.mno' --include='*.mov' --include='*.MP3' --include='*.mp3' --include='*.mp4' --include='*.pdf' --include='*.png' --include='*.pps' --include='*.ppsx' --include='*.ppt' --include='*.pptx' --include='*.psd' --include='*.ram' --include='*.rm' --include='*.sam' --include='*.sls' --include='*.svg' --include='*.swf' --include='*.tif' --include='*.vcf' --include='*.wav' --include='*.wmf' --include='*.wmv' --include='*.xls' --include='*.xlsx' --exclude='*'  "tgannon@dx24n1:/var/www/html/" "/var/www/html/" | tee /home/gannon/rsync.changes.txt
+
+
+
+sudo rsync -ruv --include='*/' --include='*.avi' --include='*.bmp' --include='*.DOC' --include='*.doc' --include='*.docx' --include='*.dwt' --include='*.eps'  --include='*.xls' --include='*.xlsx' --exclude='*'  "tgannon@dx24n1:/var/www/html/" "/var/www/html/"
+
+
+
+
+
+zip files???
+
