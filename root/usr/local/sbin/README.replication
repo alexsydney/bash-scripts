@@ -1,0 +1,17 @@
+settings.sh.include
+    The settings.sh.include file located here contains the configuration for the other scripts.
+It also contains the password for a root-level user on both dbprodpa and dbaltpa, so
+please handle it with care.
+
+The other files here have no critical information.
+
+
+check_replication.sh
+    This script should be scheduled for hourly execution through cron.  It verifies that mysql replication is functioning and notifies responsible parties, all according to what is found in settings.sh.
+
+reset_replication.sh
+    This script should be run from the production server in the event that replication needs to be rebuilt.  First be sure that the data in the production database is authoritative (viz. restore from tape backup or from a backup of alt, etc.), because it will overwrite the alt database with whatever data are currently in the prod database.
+
+replication_failure_message.sh.include
+    This file was just broken out in order to make check_replication.sh more readable.
+

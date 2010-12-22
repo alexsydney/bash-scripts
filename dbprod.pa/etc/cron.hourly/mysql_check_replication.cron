@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SERVICE='mysqld'
+
+#  Only run the replication check if mysql is running.
+if ps ax | grep -v grep | grep $SERVICE > /dev/null
+then
+  /usr/local/sbin/check_replication.sh
+fi
+
+

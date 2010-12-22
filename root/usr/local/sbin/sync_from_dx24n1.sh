@@ -13,11 +13,10 @@
 
 src_server='dx24n1'
 src_root='/var/www/html'
-dest_root='/var/www/webprod.pa.ucsf.edu'
-log_file="/tmp/rsync.log.`date +%Y%m%d`"
+dest_root='/var/www/data/legacy'
+log_file="/tmp/sync_from_dx24n1.log"
 user='tgannon'
 recipients='tgannon@gmail.com'
-
 
 if [ -e $log_file ]; then rm $log_file; fi
 

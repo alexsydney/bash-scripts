@@ -1,0 +1,27 @@
+get_last_stamp_query="select * from replication_monitor where id%$increment=$offset order by id desc limit 1;"
+cat<<EOF >> $message_file
+Replication monitor has found that replication from $master to $slave has fallen behind.
+The most recent replication timestamp added at $master is:
+
+`mysql -h $master -p$password -u $user $db -sN -e "$get_last_stamp_query"`
+
+But the most recent timestamp generated at $master and replicated to $slave is:
+
+`mysql -h $slave -p$password -u $user $db -sN -e "$get_last_stamp_query"`
+
+If all servers in the cluster are believed to be operational, the most likely cause for replication to fail is 
+for some data to be written to one of the databases during a simultaneous temporary network outage to one of the 
+servers.
+In either case, replication may need to be reset.  You may do this by logging in to dbprodpa.ucsf.edu, and 
+giving
+the following command:
+
+  sudo /etc/replication/reset_replication.sh
+
+  To stop receiving these messages, you may:
+     - Remove your name from the recipients list in the script that generated this message, located at
+     `hostname`:/etc/replication/
+     - Temporarily stop the cron service on `hostname`.
+     - Remove the replication monitor job from /etc/cron.hourly on `hostname`.
+EOF
+
