@@ -11,7 +11,7 @@
 #   
 #######################################################################
 
-default_rsync_options="-rtvu --user=apache --group=apache --delete --copy-links --ignore-errors"
+default_rsync_options="-rtvup --owner --group --delete --links --ignore-errors"
 
 if [ -z "$1" ]; then
 	echo "sync_web_root"
@@ -29,13 +29,13 @@ if [ -z "$1" ]; then
 	echo "src_root and dest_root are optional parameters relative to filesystem root on respective servers."
 	echo "rsync_options overrides the default options passed to rsync, which are:"
 	echo "         $default_rsync_options"
-	echo "**** Notice especially the --copy-links "
+	echo "**** Notice especially the --delete ... this script creates a total mirror. "
 	exit 1
 fi	
 
 # default source and destination roots
-src_root='/var/www/drupal'
-dest_root='/var/www/drupal'
+src_root='/var/www'
+dest_root='/var'
 
 log_file="/tmp/rsync.log"
 conn_info=$1
@@ -44,10 +44,16 @@ recipients=$2
 # Add source and destination from command parameters if specified.
 if [ -n "$3" ]; then src_root=$3; fi
 if [ -n "$4" ]; then dest_root=$4; fi
+if [ -n "$5" ]; then 
+	rsync_options=$5
+else
+	rsync_options=$default_rsync_options
+fi
+	
 # Remove any existing log file.
 if [ -e $log_file ]; then rm $log_file; fi
 
-rsync -rtvu --user=apache --group=apache --delete --copy-links --ignore-errors $conn_info:$src_root/* $dest_root 2>>$log_file
+rsync $rsync_options $conn_info:$src_root $dest_root 2>>$log_file
 
 if [ $? -ne 0 ]; then
 	subject="Errors encountered syncing files from $conn_info to `hostname`"

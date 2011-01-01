@@ -17,11 +17,10 @@ dest_root='/var/www/data/legacy'
 log_file="/tmp/sync_from_dx24n1.log"
 user='tgannon'
 recipients='tgannon@gmail.com'
-
 if [ -e $log_file ]; then rm $log_file; fi
 
 function copy_files(){
-	rsync -rtvu $user@$src_server:$src_root/$1/* $dest_root/$2 2>>$log_file
+	rsync -rtvu $user@$src_server:"$src_root/$1/*" "$dest_root/$2" 2>>$log_file
 	if [ $? -ne 0 ]; then
 		errors='yes'
 	fi
@@ -37,6 +36,9 @@ copy_files 'news_site/images' 'news/images'
 copy_files 'news_site/multimedia' 'news/multimedia'
 copy_files 'today/daily' 'today/daily'
 copy_files 'today/images' 'today/images'
+
+chown -R apache "$dest_root"
+chgrp -R apache "$dest_root"
 
 if [ -n "$errors" ]; then
 	mail -s "Errors encountered syncing files from $src_server" $recipients < $log_file

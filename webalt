@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo cp -r root/* / 
+sudo cp -r web_root/* / 
 sudo cp -r webalt.pa/* / 
-sudo /usr/local/sbin/mk_ucsf_legacy_rewrite_rules.sh
-sudo /etc/init.d/httpd restart
+sudo /usr/local/sbin/mk_mod_rewrite.conf.sh
+
