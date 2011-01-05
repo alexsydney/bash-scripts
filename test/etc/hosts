@@ -1,0 +1,14 @@
+
+#  Only add one of the following lines into your hosts file.
+#  If you are on OSX or Linux, edit /etc/hosts.  On windows, C:\windows\system32\drivers\etc\hosts.
+#  If the file doesn't already exist then create it and add just one and only one of the entries below into it.
+
+#  Webprodpa:
+64.54.134.33	www.ucsf.edu ucsf.edu today.ucsf.edu www.today.ucsf.edu news.ucsf.edu www.news.ucsf.edu community.ucsf.edu www.community.ucsf.edu
+
+#  Webaltpa:
+64.54.134.34	www.ucsf.edu ucsf.edu today.ucsf.edu www.today.ucsf.edu news.ucsf.edu www.news.ucsf.edu community.ucsf.edu www.community.ucsf.edu
+
+#  ucsf.edu Virtual IP Address:
+64.54.132.50    www.ucsf.edu ucsf.edu today.ucsf.edu www.today.ucsf.edu news.ucsf.edu www.news.ucsf.edu community.ucsf.edu www.community.ucsf.edu
+
