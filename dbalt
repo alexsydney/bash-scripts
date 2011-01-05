@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo cp -r db_root/* /
-sudo cp -r dbalt.pa/* / 
+sudo cp -rv db_root/* /
+sudo cp -rv dbalt.pa/* / 
