@@ -1,0 +1,50 @@
+#  This is the settings script, which sets variables used by other scripts in this directory.
+#  All settings should be made here.
+#
+#  Author: Tyler Gannon <tyler@medallurgy.com>
+#
+
+#  These are the recipients for errors encountered.
+recipients='virtualhosting@ucsf.edu,catherine.knechtli@ucsf.edu,tyler@medallurgy.com'
+#recipients='tyler@medallurgy.com'
+
+#  This is the replication super user.  It is used for all database commands
+#  performed by these scripts (on either server)
+#  This user is a root user for the database server, and therefore this file should be handled with care.  
+#
+#  As of writing this script, the user is only allowed to connect to either server from dbprodpa.
+#
+user='repl_admin'
+password='r(H3}><2{*I31[W*-3@rk'
+
+#  This is a user who is only allowed to connect to each server from the other.
+#     Used by replication to connect to the other server and obtain updates.
+#     In order to change any of this information, be sure to update 
+#     /etc/my.cnf on all servers as well. 
+replication_user='replication'
+replication_password='WWmwF_}g%#*k8Z>M<Q{Pa'
+
+#  This is the database that contains information for the replication monitor.
+db='replication'
+
+# The name and address of the so-called "alternate"
+alternate_host='dbaltpa'
+alternate_ip='64.54.136.113'
+
+# The name and address of the primary
+primary_host='dbprodpa'
+primary_ip='64.54.136.112'
+
+# Replication-related settings.  Be sure also to change the same values in /etc/my.cnf
+autoincrement_increment=10
+alternate_autoincrement_offset=2
+primary_autoincrement_offset=1
+
+
+
+
+defined()
+{
+[ "${!1-one}" == "${!1-two}" ]
+}
+

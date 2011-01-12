@@ -13,7 +13,7 @@
 
 filepath='/etc/httpd/conf/local'
 user='ucsfdrupal'
-password='08$cuR3'
+password='08$cuR3'	
 dbhost='dbpa.ucsf.edu'
 db='ucsf_drupal_prod'
 apache_restart_script='/etc/init.d/httpd'
@@ -64,7 +64,7 @@ for host in $(mysql -h $dbhost -p$password -u $user $db -sN -e "$get_hosts_query
 	  echo Encountered an error getting data from the database.  Exiting.
 	  exit 1
 	else
-		echo Redirects for $host: overwriting $filename         (backup in /etc/httpd/conf.backup)
+		echo "Redirects for $host: overwriting $filename         (backup in /etc/httpd/conf.backup)"
 		if [ -d /etc/httpd/conf.backup ]; then true; else mkdir /etc/httpd/conf.backup; fi
 		if [ -e $filename ]; then cp $filename "/etc/httpd/conf.backup/`basename $filename`.`date +%Y%m%d`"; fi
 		cp $tmpfile $filename

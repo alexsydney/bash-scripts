@@ -1,4 +1,0 @@
-Problem connecting to mysql server dbprodpa while checking replication
-Problem connecting to mysql server dbaltpa while checking replication
-Problem connecting to mysql server dbaltpa while checking replication
-Problem connecting to mysql server dbprodpa while checking replication
