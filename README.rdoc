@@ -1,3 +1,0 @@
-This is just a bunch of shell scripts.
-
-Written by yours truly.

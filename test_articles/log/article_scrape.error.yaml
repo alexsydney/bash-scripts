@@ -1,0 +1,30 @@
+--- 
+- message: Nil article found.
+  :url: http://www.ucsf.edu/science-cafe/conversations/ucsf-dentistry-researchers-make-new-headlines
+- message: Nil article found.
+  :url: http://www.ucsf.edu/science-cafe/conversations/ucsfs-rinaudo-explains-relevance-of-scottish-fertility-finding
+- message: Nil article found.
+  :url: http://www.ucsf.edu/news/2008/08/3725/farewell-science-cafe-conversation-you-our-readers-and-listeners
+- message: Nil article found.
+  :url: http://today.ucsf.edu/stories/ucsf-science-cafe-goes-global
+- message: Nil article found.
+  :url: http://www.ucsf.edu/news/2008/07/7897/ucsf-science-cafe-goes-global
+- message: Nil article found.
+  :url: http://news.ucsf.edu/media-coverage/details/new-ucsf-radio-program-focuses-on-womens-health
+- message: Thread 6 caught an exception.
+  :work: /Users/tyler/article_test/articles/19563
+  :exception: No such file or directory - /Users/tyler/article_test/articles/19563/new_article.html
+  :backtrace: 
+  - scrape_articles.rb:122:in `initialize'
+  - scrape_articles.rb:122:in `open'
+  - scrape_articles.rb:122:in `file_contents'
+  - scrape_articles.rb:24:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Nil article found.
+  :url: http://www.ucsf.edu/news/2008/04/3779/ucsf-science-cafe-cooks-san-diego
+- message: Nil article found.
+  :url: http://www.ucsf.edu/news/2008/03/3789/first-science-cafe-reader-survey

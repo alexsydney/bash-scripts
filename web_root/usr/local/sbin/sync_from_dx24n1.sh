@@ -13,7 +13,8 @@
 
 src_server='dx24n1'
 src_root='/var/www/html'
-dest_root='/var/www/data/legacy'
+media_dir='/var/www/multimedia'
+dest_root="$media_dir/legacy"
 log_file="/tmp/sync_from_dx24n1.log"
 user='tgannon'
 recipients='tgannon@gmail.com'
@@ -28,20 +29,24 @@ function copy_files(){
 
 copy_files 'main_site/images' 'images'
 copy_files 'main_site/media' 'media'
-copy_files 'main_site/z_multimedia' 'z_multimedia'
 copy_files 'main_site/pdf' 'pdf'
+copy_files 'main_site/z_multimedia' 'z_multimedia'
 copy_files 'main_site/sciencecafe/images' 'news/images'
 copy_files 'main_site/sciencecafe/pdf' 'news/pdf'
 copy_files 'news_site/images' 'news/images'
 copy_files 'news_site/multimedia' 'news/multimedia'
 copy_files 'today/daily' 'today/daily'
 copy_files 'today/images' 'today/images'
+copy_files 'ahw/images' 'today/images'
+copy_files '_graphics' 'images'
 
-chown -R apache "$dest_root"
-chgrp -R apache "$dest_root"
+mv $dest_root/media/podcast/sciencecafe/* $media_dir/podcast/sciencecafe/
+mv $dest_root/pdf/eir/* $media_dir/pdf/eir
+mv $dest_root/images/science_cafe/* $dest_root/news/images/stories/
 
 if [ -n "$errors" ]; then
-	mail -s "Errors encountered syncing files from $src_server" $recipients < $log_file
+    subject="Errors encountered syncing files from $src_server"
+	mail -s "$subject" $recipients < $log_file
 	exit 1
 else
 	exit 0

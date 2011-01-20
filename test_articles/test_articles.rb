@@ -1,196 +1,89 @@
-require 'rubygems'
-require 'scrapi'
 require 'yaml'
-require 'net/http'
-require '/Users/tyler/scripts/test_articles/test_progress.rb'
-require 'htmlentities'
-require 'thread'
+require File.join(File.dirname(__FILE__), 'lib/threadpool.rb')
+require File.join(File.dirname(__FILE__), 'lib/string_ext.rb')
 
-PROGRESS_FILE = '~article_test.progress'
-LOG_FILE      = '~article_test.log.yaml'
-ERROR_FILE    = '~article_test.error.yaml'
-RETRY_TIMES   = 30
-WWW           = 'webprod.pa.ucsf.edu'
-COMMUNITY     = 'test.community.ucsf.edu'
-TODAY         = 'test.today.ucsf.edu'
-NEWS          = 'test.news.ucsf.edu'
-THREAD_COUNT  = 15
+PROGRESS_FILE        = 'log/article_comparison.progress'
+LOG_FILE             = 'log/article_comparison.log.yaml'
+ERROR_FILE           = 'log/article_comparison.error.yaml'
+TEXT_MATCH_TOLERANCE = 0.333
+BASE_DIR             = '/Users/tyler/article_test/articles'
+CHUNK_SIZE           = 6
 
-MONTHS_EXPR   = /(january|february|march|april|may|june|july|august|september|october|november|december)/i
+def main
+  directories = Dir[File.join(BASE_DIR, '*')]
+  @pool       = Threadpool.new(PROGRESS_FILE, directories, LOG_FILE, ERROR_FILE)
 
-@threads      = []
-@ee_lock      = Mutex.new
-@prod_lock    = Mutex.new
+  @pool.run do |dir|
+    old_article = get_yaml File.join(dir, 'old_article.yaml')
+    new_article = get_yaml File.join(dir, 'new_article.yaml')
+    error = nil
+    result = {"old_url" => old_article["url"], "new_url" => new_article["url"]}
 
-def main_method
-  work_list = YAML::load_file( File.open('urls.yaml') )
-  @progress     = TestProgress.new(PROGRESS_FILE, work_list, LOG_FILE, ERROR_FILE)
-  
-  begin
-    (1..THREAD_COUNT).each {|i|
-      t = Thread.new { thread_method(i) }
-      @threads << t  
-    }
-    until @progress.done
-      sleep 1
-    end
-  rescue Interrupt => e
-    @progress.quit
-  end
+    old_article["title"] = old_article["title"].normalize
+    new_article["title"] = new_article["title"].normalize
 
-  @threads.each do |thread|
-    thread.join
-  end
-end
-
-def thread_method(i)
-  sleep 1
-  while next_article = @progress.get_work
-    begin
-      process_article next_article[:old]
-    rescue Interrupt => it  
-      @progress.quit
-    end
-  end
-  p "Thread #{i} all done."
-end
-
-def process_article(old_url)
-  old_uri = URI.parse(old_url.to_s)
-  new_uri = get_redirect_url(old_uri)
-  val = nil
-  if new_uri
-    old_article = scrape_article(old_uri)
-    new_article = scrape_article(new_uri)
-    val = {
-      "old" => article_to_hash(old_article, old_uri),
-      "new" => article_to_hash(new_article, new_uri)
-    }
-  end
-  @progress.complete(val)
-end
-
-def article_to_hash(article, url)
-  if article
-    val = {  #  :title, :paragraphs, :img_src, :hrefs, :links, :flash
-      "url"        => url.to_s,
-      "title"      => article.title,
-      "flash"      => article.flash,
-    }
-
-    val["paragraphs"] = article.paragraphs.map(&:normalize).reject{|t| t.empty? || ((t.length < 100) && 
-      t.match(MONTHS_EXPR))} if article.paragraphs
-    val["hrefs"]      = article.hrefs.map(&:to_s).reject{|t| t.empty? || (t.length < 6)} if article.hrefs
-    val["img_src"]    = article.img_src.map(&:to_s).reject{|t| t.empty? || (t.length < 6)} if article.img_src
-    val["links"]      = article.links.map(&:normalize).reject{|t| t.empty?} if article.links
-    val
-  else
-    {"url" => url.to_s}      
-  end
-end
-
-def scrape_article(uri)
-  article = nil
-  i=0
-
-  while article.nil? && i<RETRY_TIMES
-    article_scraper = Scraper.define do
-      array :paragraphs
-      array :links
-      array :hrefs
-      array :img_src
-      process "h1", :title => :text
-      process "p", :paragraphs => :text
-      process "img", :img_src => "@src"
-      process "a", :hrefs => "@href"
-      process "a", :links => :text
-      process "object[type=application/x-shockwave-flash]", :flash => "@data"
-      result :title, :paragraphs, :img_src, :hrefs, :links, :flash
-    end
-
-    science_cafe = Scraper.define do
-      process "div#main_contents", :article => article_scraper
-      result :article
-    end
-
-    legacy = Scraper.define do
-      process "div#contents", :article => article_scraper
-      result :article
-    end
-
-    redesign = Scraper.define do
-      process "div#content", :article => article_scraper
-      result :article
-    end    
-    begin
-      if uri.path.index('science-cafe')
-        # puts "Science cafe: #{uri}"
-        @ee_lock.synchronize {
-          article = science_cafe.scrape(uri)
-          sleep(1)
-        }
-      elsif uri.host == WWW
-        # puts "www: #{uri}"
-        @prod_lock.synchronize {
-          article = redesign.scrape(uri)
-          sleep(1)
-        }
-      else
-        # puts "legacy: #{uri}"
-        @ee_lock.synchronize {
-          article = legacy.scrape(uri)
-          sleep(1)
-        }
-      end
-    rescue Exception => e
-      errormsg "Error getting article!", uri.to_s, e.inspect
-    end
-    unless article
-      i += 1
-      puts "Nil(#{i}): #{uri}"
-      sleep 10
-    end
-  end
-  puts "Finally!!!" if article && i > 0
-  errormsg( "Nil article found.", uri.to_s) unless article
-
-  return article
-end
-
-def get_redirect_url(old_url)
-    response = nil
-    src_host = case old_url.host
-    when "www.ucsf.edu"
-      WWW
-    when "community.ucsf.edu"
-      COMMUNITY
-    when "today.ucsf.edu"
-      TODAY
-    when "news.ucsf.edu"
-      NEWS
+    unless old_article["title"] == new_article["title"]
+      result["title_mismatch"] = {"old" => old_article["title"], "new" => new_article["title"]}
+      error = "Title Mismatch"
     end
     
-    Net::HTTP.start(src_host, 80) {|http|
-      response = http.head(old_url.path)
-    }
-
-    case response.code
-    when "200"
-      new_path = old_url.path
-    when "301"
-      new_path = URI.parse(response.header["location"]).path
-    when "302"
-      new_path = URI.parse(response.header["location"]).path
-    else
-       errormsg "#{src_host} gave HTTP #{response.code} for #{old_url.path}, expected 200 or 301.", old_url
-       new_path = nil
+    [new_article["paragraphs"], old_article["paragraphs"]].each do |p|
+      p.map!(&:normalize)
+      p.reject!{|t| t.size < 200 or t.include?("CDATA") or t.include?("javascript")}
     end
-    new_url = URI.parse("http://#{WWW}#{new_path}") unless new_path.nil?
-    new_url
+    
+    old_words      = old_article["paragraphs"].join(" ").split(" ")
+    new_text       = new_article["paragraphs"].join(" ")
+    chunk_count    = (old_words.size / CHUNK_SIZE)
+    chunks         = []
+    missing_chunks = []
+
+    (0..chunk_count).each do |i|
+      chunks << old_words[i*CHUNK_SIZE..(i+1)*CHUNK_SIZE].join(" ")
+    end
+    
+    chunks.each do |chunk|
+      missing_chunks << chunk unless new_text.include?(chunk)
+    end
+    
+    unless missing_chunks.empty?
+      portion_not_found = (missing_chunks.size.to_f / chunks.size.to_f)
+      if portion_not_found > TEXT_MATCH_TOLERANCE
+        error = "#{error}#{error ? ', ' : ''}Missing Text"
+      end
+      if missing_chunks.size > 10
+        result["missing_text"] = "Pretty much everything!!!"
+      else
+        result["missing_text"] = missing_chunks
+      end
+    end
+    
+    if old_article["title"] == "Page Not Found"
+      error = nil# "Legacy Page Not Found"
+      result = {"not_found" => true,  "old_url" => old_article["url"], "new_url" => new_article["url"]}
+    end
+    
+    if error
+      @pool.log_error error, result
+      result["result"] = error
+    else
+      result["result"] = "Success"
+    end
+    result
+  end #  End of thread work.
+  
+  until @pool.done do
+    begin
+      sleep 1
+    rescue Interrupt => e
+      @pool.quit
+    end
+  end
+  @pool.quit
 end
 
-def errormsg(message, url=nil, other=nil)
-  @progress.errormsg message, url, other
+def get_yaml(file)
+  YAML::load_file(File.open(file))
 end
 
-main_method
+main

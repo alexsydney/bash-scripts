@@ -1,9 +1,9 @@
 require 'yaml'
-require File.dirname(__FILE__) + '/redirect_checker.rb'
+require File.dirname(__FILE__) + '/lib/redirect_checker.rb'
 
 
 redirect_checker = RedirectChecker.new
-urls = YAML::load_file(File.open('urls.yaml'))
+urls = YAML::load_file(File.open('/Users/tyler/article_test/urls.yaml'))
 urls.each do |pair|
   redirect_checker.add_redirect pair[:old], File.join('http://www.ucsf.edu', pair[:new])
 end

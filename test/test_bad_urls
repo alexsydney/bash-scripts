@@ -1,0 +1,7 @@
+
+for url in `cat bad_urls`; do
+    if [[ -n "`curl -I $url | grep Location`" ]]; then
+        echo $url >> good_urls
+        curl -I $url | grep Location >> good_urls
+    fi
+done

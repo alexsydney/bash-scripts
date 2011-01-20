@@ -18,8 +18,9 @@ dbhost='dbpa.ucsf.edu'
 db='ucsf_drupal_prod'
 apache_restart_script='/etc/init.d/httpd'
 redirect_target_host='www.ucsf.edu'
-
+MySQL="mysql -h $dbhost -p$password -u $user $db -sN -e"
 echo 'Generating redirect rules...'
+create_temp_table="create temporary table if not exists strings(str varchar(255));"
 
 get_hosts_query="select distinct left(replace(old_path, 'http://', ''), -1+position('/' in replace(old_path, 'http://', ''))) from ee_legacy_urls;"
 for host in $(mysql -h $dbhost -p$password -u $user $db -sN -e "$get_hosts_query"); do
@@ -56,19 +57,29 @@ for host in $(mysql -h $dbhost -p$password -u $user $db -sN -e "$get_hosts_query
 	#################################################################
 
 	EOQ
+	
+	get_tl_dirs="$create_temp_table insert strings(str) select substring(old_path, 8+position('/' in replace(old_path, 'http://', ''))) from ee_legacy_urls where instr(old_path, '$host') > 0;select distinct substring(str, 1, -1+position('/' in str)) from strings;"
+	for tld in `$MySQL "$get_tl_dirs"`; do
+	    count_in_tld=`$MySQL "select count(1) from ee_legacy_urls where instr(old_path, 'http://$host/$tld')>0;"`
+cat >> $tmpfile <<EOF
+RewriteCond %{REQUEST_URI} !^/$tld
+RewriteRule . - [skip=$count_in_tld]
+EOF
+    	rewrite_rules_query="select concat('RewriteRule ^', substring(old_path, 8+position('/' in replace(old_path, 'http://', ''))), ' http://$redirect_target_host/', new_path, ' [NC,R=301,L]') from ee_legacy_urls where instr(old_path, '$host/$tld') > 0;"
+    	$MySQL "$rewrite_rules_query" >> $tmpfile
 
-	rewrite_rules_query="select concat('RewriteRule ^', substring(old_path, 8+position('/' in replace(old_path, 'http://', ''))), '$ http://$redirect_target_host/', new_path, ' [NC,R=301,L]') from ee_legacy_urls where instr(old_path, '$host') > 0;"
-	mysql -h $dbhost -p$password -u $user $db -sN -e "$rewrite_rules_query" >> $tmpfile
+    	if [ $? -ne 0 ]; then 
+    	  echo Encountered an error getting data from the database.  Exiting.
+    	  exit 1
+    	else
+    		echo "Redirects for $host: overwriting $filename         (backup in /etc/httpd/conf.backup)"
+    		if [ -d /etc/httpd/conf.backup ]; then true; else mkdir /etc/httpd/conf.backup; fi
+    		if [ -e $filename ]; then cp $filename "/etc/httpd/conf.backup/`basename $filename`.`date +%Y%m%d`"; fi
+    		cp $tmpfile $filename
+    	fi	
+    done
+	
 
-	if [ $? -ne 0 ]; then 
-	  echo Encountered an error getting data from the database.  Exiting.
-	  exit 1
-	else
-		echo "Redirects for $host: overwriting $filename         (backup in /etc/httpd/conf.backup)"
-		if [ -d /etc/httpd/conf.backup ]; then true; else mkdir /etc/httpd/conf.backup; fi
-		if [ -e $filename ]; then cp $filename "/etc/httpd/conf.backup/`basename $filename`.`date +%Y%m%d`"; fi
-		cp $tmpfile $filename
-	fi	
 done
 
 echo Restarting Apache.  

@@ -1,0 +1,651 @@
+--- 
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/ucsf-diabetes-teaching-center-launches-new-diabetes-management-educational-
+  new_url: http://www.ucsf.edu/news/2007/09/7323/ucsf-diabetes-teaching-center-launches-new-diabetes-management-educational
+  missing_text: 
+  - breaks and ready reference Diabetes management is
+  - is unique to each individual so while
+  - while you can gain some concepts and
+  - and ideas from the site you need
+  - need to work with your own health
+  - health care team to develop a personal
+  - personal plan of care Because UCSF is
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/introducing-scidevnet
+  new_url: http://www.ucsf.edu/news/2008/07/7724/introducing-scidevnet
+  title_mismatch: 
+    old: 
+    new: Introducing SciDevNet
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/14-questions-for-obama-and-mccain
+  new_url: http://www.ucsf.edu/news/2008/07/7725/14-questions-obama-and-mccain
+  title_mismatch: 
+    old: 
+    new: Questions for Obama and McCain
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/barcelona-readies-for-euroscience
+  new_url: http://www.ucsf.edu/news/2008/07/7726/barcelona-readies-euroscience
+  title_mismatch: 
+    old: 
+    new: Barcelona Readies for Euroscience
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/networking-in-barcelona
+  new_url: http://www.ucsf.edu/news/2008/07/7727/networking-barcelona
+  title_mismatch: 
+    old: 
+    new: Networking in Barcelona
+  missing_text: Pretty much everything!!!
+- message: Thread 3 caught an exception.
+  :work: /Users/tyler/article_test/articles/10607
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/lasting-impressions-and-offbeat-observations-euroscience-2008
+  new_url: http://www.ucsf.edu/news/2008/07/7728/lasting-impressions-and-offbeat-observations-euroscience-2008
+  title_mismatch: 
+    old: 
+    new: Lasting Impressions and Offbeat Observations Euroscience
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/gazzaley-makes-news-again-uk-judge-bars-would-be-chemistry-student
+  new_url: http://www.ucsf.edu/news/2008/08/7729/gazzaley-makes-news-again-uk-judge-bars-would-be-chemistry-student
+  title_mismatch: 
+    old: 
+    new: Gazzaley Makes News Again UK Judge Bars WouldBe Chemistry Student
+  missing_text: Pretty much everything!!!
+- message: Thread 9 caught an exception.
+  :work: /Users/tyler/article_test/articles/10627
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/does-the-public-understand-science
+  new_url: http://www.ucsf.edu/news/2008/08/7730/does-public-understand-science
+  title_mismatch: 
+    old: 
+    new: Does the Public Understand Science
+  missing_text: Pretty much everything!!!
+- message: Thread 9 caught an exception.
+  :work: /Users/tyler/article_test/articles/11461
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/new-hope-for-hiv-treatment-cells-exhausted-from-fighting-hiv-infection-can-
+  new_url: http://www.ucsf.edu/news/2008/11/4159/new-hope-hiv-treatment-cells-exhausted-fighting-hiv-infection-can
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/ucsf-health-disparities-symposium-highlights-gaps-in-health-and-health-care
+  new_url: http://www.ucsf.edu/news/2008/11/7862/ucsf-health-disparities-symposium-highlights-gaps-health-and-health-care
+  missing_text: 
+  - UCSFs second annual Health Disparities Research Symposium
+  - Symposium showcased faculty research on the racial
+  - racial ethnic and socioeconomic gaps evident in
+  - in disease incidence and survival patient care
+  - care and healthy or harmful lifestyle choices
+  - choices
+- message: Thread 1 caught an exception.
+  :work: /Users/tyler/article_test/articles/12110
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/aids-sutra-untold-stories-from-india-book-reading-at-ucsf
+  new_url: http://www.ucsf.edu/news/2008/12/4175/aids-sutra-untold-stories-india-book-reading-ucsf
+  title_mismatch: 
+    old: AIDS Sutra Untold Stories From Indiabook reading at UCSF
+    new: AIDS Sutra Untold Stories From India book reading at UCSF
+- message: Thread 10 caught an exception.
+  :work: /Users/tyler/article_test/articles/12175
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/uc-president-issues-message-time-for-budget-reality
+  new_url: http://www.ucsf.edu/news/2008/12/7934/uc-president-issues-message-time-budget-reality
+  missing_text: 
+  - UC President Mark Yudof issued a letter
+  - letter and video recently asking for public
+  - public support for the University of California
+  - California a major driver of economic activity
+  - activity in the state and nation His
+  - His message is posted on UC website
+  - website
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/expensive-ct-scans-wheres-the-patient-benefit
+  new_url: http://www.ucsf.edu/news/2008/12/7947/expensive-ct-scans-wheres-patient-benefit
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/ucsf-resource-allocation-program-offers-third-round-of-grants
+  new_url: http://www.ucsf.edu/news/2008/08/8062/ucsf-resource-allocation-program-offers-third-round-grants
+  missing_text: 
+  - The deadline to submit an application for
+  - for this round is Monday September A
+  - A Notice of Intent is not required
+  - required RAP catalyzed by the Clinical and
+  - and Translational Science Institute CTSI brings together
+  - together many different intramural funding programs including
+  - including the In the last year funding
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/uc-libraries-launch-pilot-of-melvyl-catalog-replacement
+  new_url: http://www.ucsf.edu/news/2008/06/8108/uc-libraries-launch-pilot-melvyl-catalog-replacement
+  missing_text: 
+  - UCSF library users are encouraged to test
+  - test the pilot called MelvylUCSF and to
+  - to offer feedback on how well it
+  - it meets their needs The UCSF version
+  - version is available Melvyl lovers should have
+  - have no fear The current Melvyl Catalog
+  - Catalog will continue to be available throughout
+  - throughout the pilot period here The pilot
+  - pilot period runs through the end of
+  - of November The pilot version features a
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/nominations-due-by-january-6-for-the-chancellors-award-for-the-advancement-
+  new_url: http://www.ucsf.edu/news/2008/12/8134/nominations-due-january-6-chancellors-award-advancement
+  missing_text: 
+  - to receive the award Each recipient will
+  - will receive Both women and men are
+  - are eligible for this award The nomination
+  - nomination form and award criteria are available
+  - available on the Chancellors Office website Both
+  - Both women and men who excel in
+  - in one or more of the following
+  - following areas are eligible to be nominated
+  - nominated for this award
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/nominations-due-jan.-16-for-chancellors-public-service-award1
+  new_url: http://www.ucsf.edu/news/2009/01/8219/nominations-due-jan-16-chancellors-public-service-award1
+  missing_text: 
+  - This award recognizes individuals at UCSF who
+  - who have demonstrated outstanding public service beyond
+  - beyond the scope of their job area
+  - area of research or training UCSF academics
+  - academics staff and students residents and postdoctoral
+  - postdoctoral scholars are eligible to be nominated
+  - nominated for this award and each awardee
+  - awardee will receive
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/nominations-sought-for-exceptional-service-management
+  new_url: http://www.ucsf.edu/news/2007/01/7396/nominations-sought-exceptional-service-management
+  missing_text: 
+  - Up to six individuals will be selected
+  - selected to receive these awards each will
+  - will receive pretax The awards will be
+  - be presented at the annual Founders Day
+  - Day Awards Luncheon in the spring Nominations
+  - Nominations for both awards can only be
+  - be made by the nominees supervisor and
+  - and must be endorsed by herhis department
+  - department or unit head
+- message: Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/conversations/behavior-and-side-effects-a-conversation-with-laurence-tecott
+  new_url: http://www.ucsf.edu/news/2009/01/3740/behavior-and-side-effects-conversation-laurence-tecott
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/zip-code-may-predict-health-expert-says
+  new_url: http://www.ucsf.edu/news/2009/01/8246/zip-code-may-predict-health-expert-says
+  title_mismatch: 
+    old: Zip Code May Predict Health Expert Says
+    new: Zip code race class trump genetics and health care as predictors of public health
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/ucsf-intensifies-focus-on-china-as-valuable-partner-in-advancing-health
+  new_url: http://www.ucsf.edu/news/2009/02/8248/ucsf-intensifies-focus-china-valuable-partner-advancing-health
+  title_mismatch: 
+    old: UCSF Intensifies Focus on China as Valuable Partner in Advancing Health
+    new: UCSF Partners with China to Promote Health Scientific Research and Education
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/ucsf-community-celebrates-mlk-award-winners
+  new_url: http://www.ucsf.edu/news/2009/02/8249/ucsf-community-celebrates-mlk-award-winners
+  title_mismatch: 
+    old: UCSF Community Celebrates MLK Award Winners
+    new: Three are recognized for their contribution to social justice
+- message: Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/conversations/brain-cells-growing-bad-a-conversation-with-david-rowitch
+  new_url: http://www.ucsf.edu/news/2009/02/3742/brain-cells-growing-bad-conversation-david-rowitch
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/sun-receives-deans-postdoctoral-prize-for-work-with-specialized-immune-cell
+  new_url: http://www.ucsf.edu/news/2009/02/8250/sun-receives-deans-postdoctoral-prize-work-specialized-immune-cell
+  title_mismatch: 
+    old: Sun Receives Deans Postdoctoral Prize for Work with Specialized Immune Cells
+    new: UCSF Scholar Honored for Work With Cells That Fight Cancer Viral Infection
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/biotech-hatchlings-leave-garage-and-spread-their-wings
+  new_url: http://www.ucsf.edu/news/2009/02/8252/biotech-hatchlings-leave-garage-and-spread-their-wings
+  title_mismatch: 
+    old: Biotech Hatchlings Leave Garage and Spread Their Wings
+    new: UCSFbased facility nurtures biotech startups seeking venture funding
+- message: Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/conversations/lung-cancer-now-is-the-focus-of-powerful-genetics-research
+  new_url: http://www.ucsf.edu/news/2009/02/3744/lung-cancer-now-focus-powerful-genetics-research
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-dental-clinic-offers-free-cleanings-for-give-kids-a-smile-day
+  new_url: http://www.ucsf.edu/news/2009/02/4197/ucsf-dental-clinic-offers-free-cleanings-give-kids-smile-day
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/conversations/new-gene-therapy-technique-for-alzheimers-and-other-brain-disorders
+  new_url: http://www.ucsf.edu/news/2009/02/3746/new-gene-therapy-technique-alzheimers-and-other-brain-disorders
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://today.ucsf.edu/stories/first-interprofessional-health-fair-brings-together-students-from-various-d
+  new_url: http://www.ucsf.edu/news/2009/02/8274/first-interprofessional-health-fair-brings-together-students-various-d
+  title_mismatch: 
+    old: First Interprofessional Health Fair Brings Together Students from Various Disciplines
+    new: UCSF Students Offer Health Services Counseling to Custodial Staff
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/team-recommends-greater-cultural-awareness-in-end-of-life-care-for-latino-p
+  new_url: http://www.ucsf.edu/news/2009/03/4210/team-recommends-greater-cultural-awareness-end-life-care-latino-p
+  title_mismatch: 
+    old: Team recommends greater cultural awareness in endoflife care for latino patients
+    new: Team recommends greater cultural awareness in endoflife care for Latino patients
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/uc-to-begin-planning-for-employee-furloughs-salary-reductions-in-response-t
+  new_url: http://www.ucsf.edu/news/2009/04/8318/uc-begin-planning-employee-furloughs-salary-reductions-response-t
+  missing_text: 
+  - Mark Yudof Yudof made the statement today
+  - today April which is posted on the
+  - the University website
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-neurologist-former-congressman-gephardt-to-discuss-issues-at-health-ca
+  new_url: http://www.ucsf.edu/news/2009/05/4234/ucsf-neurologist-former-congressman-gephardt-discuss-issues-health-ca
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/mobile-technology-forum-explores-solutions-for-global-health
+  new_url: http://www.ucsf.edu/news/2009/05/4243/mobile-technology-forum-explores-solutions-global-health
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/conversations/telomeres-as-a-measure-of-health-and-aging-a-conversation-with-elissa-epel
+  new_url: http://www.ucsf.edu/news/2009/07/3751/telomeres-measure-health-and-aging-conversation-elissa-epel
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-childrens-hospital-to-honor-transplant-patients-at-circus-picnic
+  new_url: http://www.ucsf.edu/news/2009/07/4276/ucsf-childrens-hospital-honor-transplant-patients-circus-picnic
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/new-york-times-features-ucsf-breast-cancer-surgeon
+  new_url: http://www.ucsf.edu/news/2009/08/3473/new-york-times-features-ucsf-breast-cancer-surgeon
+  title_mismatch: 
+    old: New York Times features UCSF Breast Cancer Surgeon
+    new: New York Times features UCSF breast cancer surgeon
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/first-stem-cell-clinical-trial-for-treating-brains-communication-highway
+  new_url: http://www.ucsf.edu/news/2009/09/4292/first-stem-cell-clinical-trial-treating-brains-communication-highway
+  title_mismatch: 
+    old: first stem cell clinical trial for treating brains communication highway to begin
+    new: First stem cell clinical trial for treating brains communication highway to begin
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/media-tour-grand-opening-of-new-ucsf-orthopaedic-institute
+  new_url: http://www.ucsf.edu/news/2009/10/4303/media-tour-grand-opening-new-ucsf-orthopaedic-institute
+  missing_text: 
+  - The Orthopaedic Institute is UCSFs first clinical
+  - clinical service for patients in Mission Bay
+  - Bay and it also serves as a
+  - a robust research hub where therapies like
+  - like cartilage regeneration are translated from the
+  - the lab to patients In this allinone
+  - allinone facility surgeons and specialists treat musculoskeletal
+  - musculoskeletal problems and sports injuries in adolescents
+  - adolescents and adults in an outpatient setting
+  - setting ABOUT UCSF UCSF is a leading
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-to-host-kick-off-event-for-macys-tree-lighting-with-barry-zito
+  new_url: http://www.ucsf.edu/news/2009/10/4309/ucsf-host-kick-event-macys-tree-lighting-barry-zito
+  missing_text: 
+  - Kickoff event for the th annual Macys
+  - Macys Christmas Tree Lighting benefiting UCSF Childrens
+  - Childrens Hospital The celebration will feature a
+  - a visit from Honorary Chair and San
+  - San Francisco Giants pitcher Barry Zito as
+  - as well as face painting refreshments and
+  - and elves to entertain young patients Great
+  - Great photo audio and video opportunities BACKGROUND
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/actress-kathleen-turner-to-visit-ucsf-for-overview-of-arthritis-research
+  new_url: http://www.ucsf.edu/news/2009/10/4314/actress-kathleen-turner-visit-ucsf-overview-arthritis-research
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/media-briefing-ucsf-police-respond-about-officer-death
+  new_url: http://www.ucsf.edu/news/2009/10/4321/media-briefing-ucsf-police-respond-about-officer-death
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/annual-tree-lighting-ceremony-to-benefit-ucsf-childrens-hospital2
+  new_url: http://www.ucsf.edu/news/2009/11/4334/annual-tree-lighting-ceremony-benefit-ucsf-childrens-hospital2
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/ucsf-patient-safety-expert-profiled-in-the-new-york-times
+  new_url: http://www.ucsf.edu/news/2009/12/3540/ucsf-patient-safety-expert-profiled-new-york-times
+  title_mismatch: 
+    old: UCSF Patient Safety Expert Profiled in The New York Times
+    new: UCSF patient safety expert profiled in the New York Times
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-rhodessa-jones-performance-showcases-women-of-color-with-hiv
+  new_url: http://www.ucsf.edu/news/2010/03/4375/ucsf-rhodessa-jones-performance-showcases-women-color-hiv
+  missing_text: Pretty much everything!!!
+- message: Thread 1 caught an exception.
+  :work: /Users/tyler/article_test/articles/19563
+  :exception: No such file or directory - /Users/tyler/article_test/articles/19563/old_article.yaml
+  :backtrace: 
+  - test_articles.rb:86:in `initialize'
+  - test_articles.rb:86:in `open'
+  - test_articles.rb:86:in `get_yaml'
+  - test_articles.rb:17:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/media-stories-highlight-ucsf-study-on-bisphosphonate-treatment-for-osteopor
+  new_url: http://www.ucsf.edu/news/2010/03/3587/media-stories-highlight-ucsf-study-bisphosphonate-treatment-osteopor
+  title_mismatch: 
+    old: Media stories highlight UCSF study on bisphosphonate treatment for osteoporosis
+    new: Media Stories Highlight UCSF Study on Bisphosphonate Treatment for Osteoporosis
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-summit-empowers-young-women-to-be-next-generation-of-leaders1
+  new_url: http://www.ucsf.edu/news/2010/04/4391/ucsf-summit-empowers-young-women-be-next-generation-leaders1
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/golden-state-warriors-ronny-turiaf-raises-awareness-for-cardiac-screening
+  new_url: http://www.ucsf.edu/news/2010/04/4398/golden-state-warriors-ronny-turiaf-raises-awareness-cardiac-screening
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/asthma-and-ancestry-heritage-disease-and-drug-response1
+  new_url: http://www.ucsf.edu/news/2010/04/3602/asthma-and-ancestry-heritage-disease-and-drug-response1
+  title_mismatch: 
+    old: Asthma and ancestry Heritage disease and drug response
+    new: Asthma and Ancestry Heritage Disease and Drug Response
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-hosting-free-heart-and-health-screenings-for-san-francisco-high-school
+  new_url: http://www.ucsf.edu/news/2010/05/4408/ucsf-hosting-free-heart-and-health-screenings-san-francisco-high-school
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-to-release-report-on-economic-impact-on-bay-area
+  new_url: http://www.ucsf.edu/news/2010/06/4416/ucsf-release-report-economic-impact-bay-area
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/one-dose-radiation-for-breast-cancer-covered-in-local-news
+  new_url: http://www.ucsf.edu/news/2010/06/3616/one-dose-radiation-breast-cancer-covered-local-news
+  title_mismatch: 
+    old: Onedose radiation for breast cancer covered in local news
+    new: Onedose Radiation for Breast Cancer Covered in Local News
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/lesbian-family-study-generates-national-headlines
+  new_url: http://www.ucsf.edu/news/2010/06/3617/lesbian-family-study-generates-national-headlines
+  title_mismatch: 
+    old: Lesbian family study generates national headlines
+    new: Lesbian Family Study Generates National Headlines
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/editorial-calls-for-funding-science-volunteer-programs
+  new_url: http://www.ucsf.edu/news/2010/07/3635/editorial-calls-funding-science-volunteer-programs
+  title_mismatch: 
+    old: Editorial calls for funding science volunteer programs
+    new: Editorial calls for Funding Science Volunteer Programs
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-honors-pediatric-transplant-patients-at-15th-annual-picnic
+  new_url: http://www.ucsf.edu/news/2010/08/4435/ucsf-honors-pediatric-transplant-patients-15th-annual-picnic
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/zen-hospice-ucsf-partner-on-opening-of-new-patient-facility
+  new_url: http://www.ucsf.edu/news/2010/08/4448/zen-hospice-ucsf-partner-opening-new-patient-facility
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-to-showcase-advances-in-diabetes-research-and-care
+  new_url: http://www.ucsf.edu/news/2010/09/4456/ucsf-showcase-advances-diabetes-research-and-care
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-breaks-ground-on-new-mission-bay-medical-center
+  new_url: http://www.ucsf.edu/news/2010/10/5781/ucsf-breaks-ground-new-mission-bay-medical-center
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/new-prostate-cancer-imaging-shows-real-time-tumor-metabolism
+  new_url: http://www.ucsf.edu/news/2010/11/5846/new-prostate-cancer-imaging-shows-real-time-tumor-metabolism
+  title_mismatch: 
+    old: Watchful waiting has a new set of eyes New prostate cancer imaging shows realtime tumor metabolism
+    new: Watchful waiting has a new set of eyesNew prostate cancer imaging shows realtime tumor metabolism
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/media-coverage/details/ucsf-pilots-trial-to-prevent-hair-loss-in-chemotherapy
+  new_url: http://www.ucsf.edu/news/2010/12/5866/ucsf-pilots-trial-prevent-hair-loss-chemotherapy
+  title_mismatch: 
+    old: UCSF cool caps pilot trial draws national news stories
+    new: UCSF pilots trial to prevent hair loss in chemotherapy
+  missing_text: 
+  - A new UCSF pilot trial to combat
+  - hair loss during chemotherapy is generating media
+  - media attention nationally and locally Stories in
+  - in the Los Angeles Times MSNBCcom KGOTV
+  - KGOTV and KQED Radio have featured the
+  - the new feasibility study on a scalp
+  - as minutes Featured in the stories are
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/ucsf-challenge-for-the-children-highly-successful-breaks-1-million
+  new_url: http://www.ucsf.edu/news/2010/12/8342/ucsf-challenge-children-highly-successful-breaks-1-million
+  title_mismatch: 
+    old: UCSF Challenge for the Children highly successful breaks M
+    new: UCSF Challenge for the Children highly successful breaks million
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/ucsf-medical-center-makes-merry-during-season-of-joy
+  new_url: http://www.ucsf.edu/news/2006/12/6900/ucsf-medical-center-makes-merry-during-season-joy
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/expert-excerpts-hear-stem-cell-scientists-discuss-what-comes-next
+  new_url: http://www.ucsf.edu/news/2005/10/6381/expert-excerpts-hear-stem-cell-scientists-discuss-what-comes-next
+  missing_text: Pretty much everything!!!
+- message: Thread 8 caught an exception.
+  :work: /Users/tyler/article_test/articles/498
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Thread 1 caught an exception.
+  :work: /Users/tyler/article_test/articles/585
+  :exception: undefined method `map!' for nil:NilClass
+  :backtrace: 
+  - test_articles.rb:31:in `block (2 levels) in main'
+  - test_articles.rb:30:in `each'
+  - test_articles.rb:30:in `block in main'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:28:in `block (3 levels) in run'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `call'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:62:in `thread_method'
+  - /Users/tyler/scripts/test_articles/lib/threadpool.rb:27:in `block (2 levels) in run'
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/a-presidential-science-adviser
+  new_url: http://www.ucsf.edu/news/2008/04/7731/presidential-science-adviser
+  title_mismatch: 
+    old: 
+    new: A Presidential Science Adviser
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/where-are-the-transcripts
+  new_url: http://www.ucsf.edu/news/2008/04/7732/where-are-transcripts
+  title_mismatch: 
+    old: 
+    new: Where Are the Transcripts
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/euroscience-wants-you-ucsf-in-chile
+  new_url: http://www.ucsf.edu/news/2008/05/7733/euroscience-wants-you-ucsf-chile
+  title_mismatch: 
+    old: 
+    new: Euroscience Wants You UCSF in Chile
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/our-new-index-liberal-science-gazzaley-in-time
+  new_url: http://www.ucsf.edu/news/2008/05/7734/our-new-index-liberal-science-gazzaley-time
+  title_mismatch: 
+    old: 
+    new: Our New Index Liberal Science Gazzaley in Time
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/have-fun-with-hidden-worlds
+  new_url: http://www.ucsf.edu/news/2008/05/7735/have-fun-hidden-worlds
+  title_mismatch: 
+    old: 
+    new: Have Fun with Hidden Worlds
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/obesity-to-blame-for-climate-change
+  new_url: http://www.ucsf.edu/news/2008/06/7736/obesity-blame-climate-change
+  title_mismatch: 
+    old: 
+    new: Obesity to Blame for Climate Change
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/85-percent-of-americans-are-right-about-something
+  new_url: http://www.ucsf.edu/news/2008/05/7737/85-percent-americans-are-right-about-something
+  title_mismatch: 
+    old: 
+    new: Percent of Americans Are Right About Something
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/scientoons-anyone
+  new_url: http://www.ucsf.edu/news/2008/06/7738/scientoons-anyone
+  title_mismatch: 
+    old: 
+    new: Scientoons Anyone
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/a-second-type-of-botulinum-toxin-btx-b-may-be-effective-for-treating-face-w
+  new_url: http://www.ucsf.edu/news/2002/06/4637/second-type-botulinum-toxin-btx-b-may-be-effective-treating-face-w
+  title_mismatch: 
+    old: A second type of botulinum toxinBTXB may be effective for treating face wrinkles
+    new: A second type of botulinum toxin BTXB may be effective for treating face wrinkles
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/shower-curtains-and-your-health
+  new_url: http://www.ucsf.edu/news/2008/06/7739/shower-curtains-and-your-health
+  title_mismatch: 
+    old: 
+    new: Shower Curtains and Your Health
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/most-resistance-to-anti-hiv-drugs-created-by-good-pill-taking-patients-not-
+  new_url: http://www.ucsf.edu/news/2003/08/4671/most-resistance-anti-hiv-drugs-created-good-pill-taking-patients-not
+  title_mismatch: 
+    old: Most resistance to antihiv drugs created by good pilltaking patientsnot by poor pilltakers
+    new: Most resistance to antihiv drugs created by good pilltaking patients not by poor pilltakers
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/most-resistance-to-anti-hiv-drugs-created-by-good-pill-taking-patients-not-
+  new_url: http://www.ucsf.edu/news/2003/08/4677/most-resistance-anti-hiv-drugs-created-good-pill-taking-patients-not
+  title_mismatch: 
+    old: Most resistance to antihiv drugs created by good pilltaking patientsnot by poor pilltakers
+    new: Most resistance to antihiv drugs created by good pilltaking patients not by poor pilltakers
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/clinical-trial-shows-improved-survival-for-a-severe-birth-defect-with-or-wi
+  new_url: http://www.ucsf.edu/news/2003/11/4703/clinical-trial-shows-improved-survival-severe-birth-defect-or-wi
+  title_mismatch: 
+    old: Clinical trial shows improved survival for a severe birth defectwith or without fetal surgery
+    new: Clinical trial shows improved survival for a severe birth defect with or without fetal surgery
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/ucsf-sfghmc-family-practice-residency-program-celebrates-30-years-serving-u
+  new_url: http://www.ucsf.edu/news/2002/04/4736/ucsf-sfghmc-family-practice-residency-program-celebrates-30-years-serving-u
+  title_mismatch: 
+    old: UCSFSFGHMC Family Practice Residency Program celebrates years serving urban underserved commun
+    new: UCSFSFGHMC Family Practice Residency Program celebrates years serving urban underserved communi
+  missing_text: 
+  - residents and tour the innovative center We
+  - program The open house was planned to
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/sfvamc-ucsf-researchers-develop-lead-for-a-new-alzheimers-disease-drug-a-fr
+  new_url: http://www.ucsf.edu/news/2000/11/4974/sfvamc-ucsf-researchers-develop-lead-new-alzheimers-disease-drug-fr
+  title_mismatch: 
+    old: SFVAMCUCSF researchers develop lead for a new Alzheimers disease druga fragment of a brain gro
+    new: SFVAMCUCSF researchers develop lead for a new Alzheimers disease drug a fragment of a brain gro
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/ucsf-team-reveals-how-the-most-selective-of-all-cell-gatekeepers-works-a-th
+  new_url: http://www.ucsf.edu/news/2000/10/4981/ucsf-team-reveals-how-most-selective-all-cell-gatekeepers-works-th
+  title_mismatch: 
+    old: UCSF team reveals how the most selective of all cell gatekeepers worksa threefaced channel vi
+    new: UCSF team reveals how the most selective of all cell gatekeepers works a threefaced channel vi
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/spring-series-of-ucsf-osher-lifelong-learning-institute-starts-april-28
+  new_url: http://www.ucsf.edu/news/2004/03/6103/spring-series-ucsf-osher-lifelong-learning-institute-starts-april-28
+  title_mismatch: 
+    old: 
+    new: Spring series of UCSF Osher Lifelong Learning Institute starts April
+- message: Missing Text
+  old_url: http://news.ucsf.edu/releases/ucsf-medical-center-childrens-hospital-make-us-news-americas-best-hospitals
+  new_url: http://www.ucsf.edu/news/2004/07/5182/ucsf-medical-center-childrens-hospital-make-us-news-americas-best-hospitals
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/killer-diseases-strategies-for-prevention
+  new_url: http://www.ucsf.edu/news/2004/10/5220/killer-diseases-strategies-prevention
+  title_mismatch: 
+    old: Killer diseasesstrategies for prevention
+    new: Killer diseases strategies for prevention
+- message: Title Mismatch, Missing Text
+  old_url: http://news.ucsf.edu/releases/firefly-project-features-live-reading-of-letters-from-patients-and-their-te
+  new_url: http://www.ucsf.edu/news/2006/05/5420/firefly-project-features-live-reading-letters-patients-and-their-te
+  title_mismatch: 
+    old: Firefly project features live reading of letters from patients and their teenage pen pals on June
+    new: Firefly project features live reading of letters from patients and their teenage pen pals on May
+  missing_text: Pretty much everything!!!
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/new-bacterium-discovered-related-to-cause-of-trench-fever
+  new_url: http://www.ucsf.edu/news/2007/06/5589/new-bacterium-discovered-related-cause-trench-fever
+  title_mismatch: 
+    old: New bacterium discoveredrelated to cause of trench fever
+    new: New bacterium discovered related to cause of trench fever
+- message: Title Mismatch
+  old_url: http://news.ucsf.edu/releases/what-gets-a-females-attention-at-least-a-songbirds
+  new_url: http://www.ucsf.edu/news/2008/03/5674/what-gets-females-attention-least-songbirds
+  title_mismatch: 
+    old: What gets a females attentionat least a songbirds
+    new: What gets a females attention at least a songbirds
+- message: Title Mismatch, Missing Text
+  old_url: http://www.ucsf.edu/science-cafe/blog/entries/gay-brains-and-funny-women
+  new_url: http://www.ucsf.edu/news/2008/06/7740/gay-brains-and-funny-women
+  title_mismatch: 
+    old: 
+    new: Gay Brains and Funny Women
+  missing_text: Pretty much everything!!!
+- message: Missing Text
+  old_url: http://today.ucsf.edu/stories/cancer-preventing-benefits-of-the-traditional-asian-diet
+  new_url: http://www.ucsf.edu/news/2006/10/7114/cancer-preventing-benefits-traditional-asian-diet
+  missing_text: Pretty much everything!!!

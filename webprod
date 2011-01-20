@@ -1,6 +1,0 @@
-#!/bin/sh
-
-sudo cp -rv web_root/* / 
-sudo cp -rv webprod.pa/* / 
-sudo /usr/local/sbin/mk_mod_rewrite.conf.sh
-
