@@ -55,16 +55,10 @@ find $doc_root -type f -exec chmod u=rw,g=r,o= {} \;
 
 # Now let $docroot_group group write to the files directories.
 # While we're at it, get rid of any php or htaccess files there.
-for dir in "$drupal_root/media" "$drupal_root/sites/default/files"; do
+for dir in "$drupal_root/media" "$drupal_root/sites/default/files" "$doc_root/servers"; do
     echo "Set permissions on $dir"
     find -L $dir -type d -exec chmod u=rwx,g=rwx,o= {} \;
     find -L $dir -type f -exec chmod u=rw,g=rw,o= {} \;
-    for file in `find -L $dir -type f -iname "*.php"`; do
-        rm $file
-    done
-    for file in `find -L $dir -type f -iname ".htaccess"`; do
-        rm $file
-    done
 done
 
 # Delete unwanted drupal files
@@ -79,3 +73,17 @@ done
 #  Also make sure nobody dropped a writeable file into /etc/httpd
 find /etc/httpd -type d -exec chmod u=rwx,g=rx,o=rx {} \;
 find /etc/httpd -type f -exec chmod u=rw,g=r,o=r {} \;
+
+if [[ -n "`grep \"User web-admin\" /etc/httpd/conf/httpd.conf`"      ]]; then
+    cat<<EOF
+*******
+*******
+I noticed the web server is running as web-admin.  
+You should run dont_run_apache_as_web-admin.sh asap to rectify this.
+Be aware that it will require rebooting apache.
+*******
+*******
+EOF
+fi   
+
+echo "All done setting permissions."

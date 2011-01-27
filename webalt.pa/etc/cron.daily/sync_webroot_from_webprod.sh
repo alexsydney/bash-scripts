@@ -14,7 +14,7 @@
 rsync_user=rsync
 source_server=webprodpa
 # recipients should be a comma-delimited list.
-recipients='tgannon@gmail.com'
+recipients=`/usr/local/sbin/email_recipients.sh`
 
 /usr/local/sbin/sync_web_root.sh $rsync_user@$source_server "$recipients"
 

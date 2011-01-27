@@ -28,8 +28,6 @@ function copy_files(){
 }
 
 copy_files 'main_site/images' 'images'
-copy_files 'main_site/media' 'media'
-copy_files 'main_site/pdf' 'pdf'
 copy_files 'main_site/z_multimedia' 'z_multimedia'
 copy_files 'main_site/sciencecafe/images' 'news/images'
 copy_files 'main_site/sciencecafe/pdf' 'news/pdf'
@@ -38,11 +36,17 @@ copy_files 'news_site/multimedia' 'news/multimedia'
 copy_files 'today/daily' 'today/daily'
 copy_files 'today/images' 'today/images'
 copy_files 'ahw/images' 'today/images'
-copy_files '_graphics' 'images'
 
 mv $dest_root/media/podcast/sciencecafe/* $media_dir/podcast/sciencecafe/
 mv $dest_root/pdf/eir/* $media_dir/pdf/eir
 mv $dest_root/images/science_cafe/* $dest_root/news/images/stories/
+
+dest_root="$media_dir"
+copy-files 'main_site/media' ''
+copy_files 'main_site/pdf' 'pdf'
+copy_files 'strategy/pdf' 'pdf'
+copy_files 'ahw/pdf' 'pdf'
+copy_files 'main_site/_graphics/icons' 'icons'
 
 if [ -n "$errors" ]; then
     subject="Errors encountered syncing files from $src_server"

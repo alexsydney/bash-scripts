@@ -20,11 +20,20 @@ if [[ $host == "dbprodpa" ]]; then
 fi
 
 if [[ $host == "dbaltpa" ]]; then
-    $RSYNC b_root/* /
+    $RSYNC db_root/* /
     $RSYNC dbalt.pa/* / 
 fi
 
+if [[ $host=="vx34" ]]; then
+    host_name='dev.pa.ucsf.edu'
+elif [[ $host=="stagepa" ]]; then
+    host_name='stage.pa.ucsf.edu'
+elif [[ $host="qapa" ]]; then
+    host_name='qa.pa.ucsf.edu'
+fi
+
 if [[ $host == "vx34" || $host == "stagepa" || $host == "qapa"  ]]; then
+    sed -i  "s/webprod.pa.ucsf.edu/$host_name/g"  web_root/etc/httpd/conf/local/www.ucsf.edu.conf
     $RSYNC web_root/* / 
     sudo /usr/local/sbin/mk_mod_rewrite.conf.sh
 fi

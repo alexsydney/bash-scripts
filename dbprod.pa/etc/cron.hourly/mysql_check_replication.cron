@@ -7,5 +7,3 @@ if ps ax | grep -v grep | grep $SERVICE > /dev/null
 then
   /usr/local/sbin/check_replication.sh
 fi
-
-

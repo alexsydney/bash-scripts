@@ -1,0 +1,4 @@
+/_graphics/causes_images/global_logo.jpg
+/_graphics/causes_images/logo.jpg
+/_graphics/causes_images/childrens-lobby.jpg
+/_graphics/causes_images/footer_bg.jpg

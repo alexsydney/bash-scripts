@@ -5,8 +5,8 @@
 #
 
 #  These are the recipients for errors encountered.
-recipients='virtualhosting@ucsf.edu,catherine.knechtli@ucsf.edu,tyler@medallurgy.com'
-#recipients='tyler@medallurgy.com'
+recipients="`/usr/local/sbin/email_recipients.sh`"                                                                          
+
 
 #  This is the replication super user.  It is used for all database commands
 #  performed by these scripts (on either server)
