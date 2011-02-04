@@ -1,8 +1,0 @@
-http://identity.ucsf.edu/_graphics/banners/bannergray.gif
-/_graphics/ucsf.gif
-/_graphics/category_heads/diller.png
-/_graphics/events/diller/diller_venter.jpg
-/_graphics/events/diller/diller_bug-2.gif
-/_graphics/logos/twitter.png
-/_graphics/events/diller/frank_mccormick.jpg
-http://www.ucsf.edu/_graphics/logos/ucsf_hill_wiget.gif

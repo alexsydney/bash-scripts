@@ -1,0 +1,13 @@
+###############################################################################
+#                                                                             #
+#      Wrapper for the purge mysql logs script.                               #
+#                                                                             #
+#       author: Tyler Gannon <tyler@medallurgy.com>                           #
+#                                                                             #
+#       2011-02-03 Tyler Gannon                                               #
+#                                                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+/usr/local/sbin/mysql_purge_binlogs.sh

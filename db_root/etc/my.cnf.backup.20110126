@@ -1,0 +1,76 @@
+[mysqld]
+
+###################################################################
+##   
+##  Replication settings, added by tyler@medallurgy.com 20 Nov 2010
+##
+##   To add or remove a database from the list, make appropriate 
+##      changes here, and see http://is.gd/hv7iu for instructions 
+##      on how to complete the configuration within mysql.
+##      Be sure to update my.cnf on other server(s) as well.
+##   
+##   Revision history
+##   Date            Who                           Did what?
+##   11/20/2010     Tyler@medallurgy.com           Added replication section
+##   12/03/2010     Tyler@medallurgy.com           Removed old dbs
+##   
+###################################################################
+server-id = 1
+replicate-same-server-id = 0
+auto-increment-increment = 10
+auto-increment-offset = 1
+
+master-host = 64.54.136.113  #  dbaltpa
+master-user = replication
+master-password = WWmwF_}g%#*k8Z>M<Q{Pa
+master-connect-retry = 60
+
+replicate-do-db = ucsf_drupal_prod
+replicate-do-db = replication
+
+log-bin = log-bin
+binlog-do-db = ucsf_drupal_prod
+binlog-do-db = replication
+
+###################################################################
+##   
+##   End replication section
+##   
+###################################################################
+
+#datadir=/var/lib/mysql
+datadir=/db01/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Default to using old password format for compatibility with mysql 3.x
+# clients (those using the mysqlclient10 compatibility package).
+old_passwords=1
+max_allowed_packet=64M
+
+# edits 11-1
+skip-locking
+skip-innodb
+query_cache_type=1
+query_cache_limit=1M
+query_cache_size=32M
+interactive_timeout=100
+wait_timeout=15
+connect_timeout=10
+table_cache=512
+thread_cache=32
+key_buffer=128M
+thread_concurrency=2
+log_slow_queries=/var/log/mysqld.slow.log
+long_query_time=2
+
+[mysql.server]
+user=mysql
+basedir=/var/lib
+
+# Disabling symbolic-links is recommended to prevent assorted security risks;
+# to do so, uncomment this line:
+# symbolic-links=0
+
+[mysqld_safe]
+log-error=/var/log/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid
