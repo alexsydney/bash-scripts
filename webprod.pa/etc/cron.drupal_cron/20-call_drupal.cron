@@ -1,0 +1,3 @@
+
+wget --tries=1 http://webprod.pa.ucsf.edu/cron.php
+

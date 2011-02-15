@@ -16,5 +16,9 @@ source_server=webprodpa
 # recipients should be a comma-delimited list.
 recipients=`/usr/local/sbin/email_recipients.sh`
 
-/usr/local/sbin/sync_web_root.sh $rsync_user@$source_server "$recipients"
+#  Cache a copy of Drupal's generated css+js, just to make sure
+#     That any generated js on the destination machine won't be
+#     clobberred
+# /usr/local/sbin/set_up_additional_js_caching.sh
+# /usr/local/sbin/sync_web_root.sh $rsync_user@$source_server "$recipients"
 

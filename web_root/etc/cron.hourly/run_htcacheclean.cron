@@ -1,0 +1,4 @@
+
+#  Runs the mod_cache cleanup command for apache caching.
+/usr/sbin/htcacheclean -v -t -p/var/cache/apache_mod_cache -l1000M
+

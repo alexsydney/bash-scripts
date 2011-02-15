@@ -55,7 +55,7 @@ find $doc_root -type f -exec chmod u=rw,g=r,o= {} \;
 
 # Now let $docroot_group group write to the files directories.
 # While we're at it, get rid of any php or htaccess files there.
-for dir in "$drupal_root/media" "$drupal_root/sites/default/files" "$doc_root/servers"; do
+for dir in "$doc_root/cache $drupal_root/media" "$drupal_root/sites/default/files" "$doc_root/servers"; do
     echo "Set permissions on $dir"
     find -L $dir -type d -exec chmod u=rwx,g=rwx,o= {} \;
     find -L $dir -type f -exec chmod u=rw,g=rw,o= {} \;

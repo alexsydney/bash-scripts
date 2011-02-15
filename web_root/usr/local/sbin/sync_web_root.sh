@@ -11,7 +11,7 @@
 #   
 #######################################################################
 
-default_rsync_options="-rtvup --owner --group --delete --links --ignore-errors"
+default_rsync_options="-rtvupog --delete --links --ignore-errors"
 
 if [ -z "$1" ]; then
 	echo "sync_web_root"

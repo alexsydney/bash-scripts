@@ -11,7 +11,7 @@
 #                                                                             #
 ###############################################################################
 
-recipients='virtualhosting@ucsf.edu,catherine.knechtli@ucsf.edu,kevin@bstro.com,derrek@bstro.com,Walter.Sevillano@ucsf.edu,Kraig.Kluba@ucsf.edu,dkilby@pubaff.ucsf.edu'
+recipients='virtualhosting@ucsf.edu,catherine.knechtli@ucsf.edu,kevin@bstro.com,derrek@bstro.com,Walter.Sevillano@ucsf.edu,Kraig.Kluba@ucsf.edu,dkilby@pubaff.ucsf.edu,tyler@medallurgy.com'
 echo "$recipients"
 
 

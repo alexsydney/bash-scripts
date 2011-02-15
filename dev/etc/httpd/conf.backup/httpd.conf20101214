@@ -264,7 +264,7 @@ ServerAdmin root@localhost
 # redirections work in a sensible way.
 #
 #ServerName www.example.com:80
-Include /etc/httpd/conf/local/server_name.conf
+ServerName temppa.ucsf.edu:80
 
 #
 # UseCanonicalName: Determines how Apache constructs self-referencing 
@@ -280,7 +280,7 @@ UseCanonicalName Off
 # documents. By default, all requests are taken from this directory, but
 # symbolic links and aliases may be used to point to other locations.
 #
-DocumentRoot "/var/www/html"
+DocumentRoot "/var/www/webprod.pa.ucsf.edu"
 
 #
 # Each directory to which Apache has access can be configured with respect
@@ -992,5 +992,56 @@ NameVirtualHost *:80
 #    CustomLog logs/dummy-host.example.com-access_log common
 #</VirtualHost>
 
-Include /etc/httpd/conf/local/vhosts.conf
+<VirtualHost 64.54.132.50:80>
+    DocumentRoot /var/www/temppa.ucsf.edu
+    ServerName temppa.ucsf.edu
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/html
+    ServerName webprodpa.ucsf.edu
+    ErrorLog logs/webprodpa.ucsf.edu-error_log
+    CustomLog logs/webprodpa.ucsf.edu-access_log common
+    <Directory "/var/www/html">
+      Options Indexes FollowSymLinks
+      AllowOverride All
+     </Directory>
+     <Directory "/var/www/html/brad">
+      #AuthUserFile /var/www/ucsf.htpasswd
+      #AuthName "UCSF Development"
+      #AuthType Basic
+      #require valid-user
+    </Directory>
+</VirtualHost>
+
+<VirtualHost 64.54.134.33:80>
+    DocumentRoot /var/www/webprod.pa.ucsf.edu
+    ServerName webprod.pa.ucsf.edu 
+    ErrorLog /var/www/logs/webprod.pa.ucsf.edu-error_log
+    CustomLog /var/www/logs/webprod.pa.ucsf.edu-access_log common
+    <Directory "/var/www/webprod.pa.ucsf.edu">
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      #AuthUserFile /var/www/ucsf.htpasswd
+      #AuthName "UCSF Development"
+      #AuthType Basic
+      #require valid-user
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot /var/www/webprod.pa.ucsf.edu
+    ServerName temppa.ucsf.edu
+    ErrorLog /var/www/logs/webprod.pa.ucsf.edu-error_log
+    CustomLog /var/www/logs/webprod.pa.ucsf.edu-access_log common
+    <Directory "/var/www/webprod.pa.ucsf.edu">
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      #AuthUserFile /var/www/ucsf.htpasswd
+      #AuthName "UCSF Development"
+      #AuthType Basic
+      #require valid-user
+    </Directory>
+</VirtualHost>
+
 

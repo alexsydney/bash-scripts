@@ -1,0 +1,3 @@
+
+dir=/var/www/webprod.pa.ucsf.edu/layout_cache
+rsync -ruvog rsync@webprodpa:"$dir/*" $dir

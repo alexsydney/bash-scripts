@@ -9,7 +9,3 @@ HOME=/
 22 4 * * 0 root run-parts /etc/cron.weekly
 42 4 1 * * root run-parts /etc/cron.monthly
 
-# 0 0 * * * /usr/bin/wget --output-document=- --quiet --tries=1 http://webprod.pa.ucsf.edu/cron.php
-# 0 12 * * * /usr/bin/wget --output-document=- --quiet --tries=1 http://webprod.pa.ucsf.edu/cron.php
-# 0 14 * * * /usr/bin/wget --output-document=- --quiet --tries=1 http://webprod.pa.ucsf.edu/cron.php
-# 0 17 * * * /usr/bin/wget --output-document=- --quiet --tries=1 http://webprod.pa.ucsf.edu/cron.php

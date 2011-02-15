@@ -1,0 +1,7 @@
+
+# sync the multimedia directory
+rsync -ruvog --delete rsync@webprodpa:/var/www/multimedia /var/www
+
+#  Sync the sites/default/files directory.
+dir=/var/www/webprod.pa.ucsf.edu/sites/default
+rsync -ruvog --delete rsync@webprodpa:"$dir/files" $dir

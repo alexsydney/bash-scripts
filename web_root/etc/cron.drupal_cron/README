@@ -1,0 +1,12 @@
+###############################################################################
+#                                                                             #
+#   We have an odd schedule for Drupal cron job but the call is               #
+#   Different from each web server.                                           #
+#                                                                             #
+#   This directory will allow each drupal cron call to be unique,             #
+#   while still maintaining the same crontab file between servers.            #
+#                                                                             #
+#   To change the schedule of the drupal cron task, edit /etc/crontab.        #
+#   tyler@medallurgy.com                                                      #
+#                                                                             #
+###############################################################################
