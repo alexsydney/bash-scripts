@@ -9,7 +9,7 @@ HOME=/
 22 4 * * 0 root run-parts /etc/cron.weekly
 42 4 1 * * root run-parts /etc/cron.monthly
 
-00 00 * * * root run-parts /etc/cron.drupal_cron                           
+00 02 * * * root run-parts /etc/cron.drupal_cron                           
 00 12 * * * root run-parts /etc/cron.drupal_cron                           
 00 14 * * * root run-parts /etc/cron.drupal_cron                           
 00 17 * * * root run-parts /etc/cron.drupal_cron                           
